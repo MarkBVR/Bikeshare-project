@@ -165,8 +165,8 @@ def trip_duration_stats(df):
     start_time = time.time()
 
     # display total travel time
-    totr = np.sum(df['Trip Duration'].to_numpy())
-    time_div = datetime.timedelta(seconds= int(totr))
+    total_travel = np.sum(df['Trip Duration'].to_numpy())
+    travel_time_mod = datetime.timedelta(seconds= int(total_travel))
     print('The total traviel time:\n', time_div)
 
 
