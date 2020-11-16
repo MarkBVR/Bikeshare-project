@@ -2,7 +2,7 @@
 11/16/2020
 
 ### Project Title
-Bike Share Project
+Interactive Bike Share Project
 
 ### Description
 This project is an interactive way to investigate bikeshare data from
