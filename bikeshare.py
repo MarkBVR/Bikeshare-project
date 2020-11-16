@@ -168,16 +168,22 @@ def trip_duration_stats(df):
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
 
-    # display total travel time
+# display total travel time
+    # converts 'Trip Duration' column to numpy and finds the sum of trip durations 
     totr = np.sum(df['Trip Duration'].to_numpy())
+    # converts the seconds of travel into months, days, hours, seconds
     time_div = datetime.timedelta(seconds= int(totr))
+    # prints the travel time
     print('The total traviel time:\n', time_div)
 
 
-    # display mean travel time
+# display mean travel time
+    # converts Trip Duration column to numpy and finds the mean 
     mean_time = np.mean(df['Trip Duration'].to_numpy())
+    # converts the seconds of travel into months, days, hours, seconds. Then prints the result
     print('The mean travel time:', datetime.timedelta(seconds= int(mean_time)))
 
+# finds difference between the start time and current time to determine total work time
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
