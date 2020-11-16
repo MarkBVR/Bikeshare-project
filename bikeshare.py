@@ -100,19 +100,23 @@ def time_stats(df):
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
 
-    # display the most common month
+# display the most common month
+    # creates a new dictionary ordered my most reaccuring (common) month in start time
     mcm = df['Start Time'].dt.month.value_counts()
+    # mcm_key becomes the first item in mcm which is the most common month
     mcm_key = mcm.index[0]
+    # mcm_value is the count of mcm_key
     mcm_value = mcm.loc[mcm_key]
+    # converts the month number into the name using the month list at the top of the page
     print('The most common month to travel is {} with {} uses.'.format(months[(mcm_key-1)].title(), mcm_value))
 
-    # display the most common day of week
+# display the most common day of week
     mcd = df['Start Time'].dt.weekday.value_counts()
     mcd_key = mcd.index[0]
     mcd_value = mcd.loc[mcd_key]
     print('The most common day of the week is {} with {} uses.'.format(days[(mcd_key-1)].title(), mcd_value))
 
-    # display the most common start hour
+# display the most common start hour
     mch = df['Start Time'].dt.hour.value_counts()
     mch_key = mch.index[0]
     mch_value = mch.loc[mch_key]
