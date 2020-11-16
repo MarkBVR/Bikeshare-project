@@ -168,18 +168,22 @@ def trip_duration_stats(df):
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
 
+<<<<<<< HEAD
 # display total travel time
     # converts 'Trip Duration' column to numpy and finds the sum of trip durations 
-    totr = np.sum(df['Trip Duration'].to_numpy())
+    total_travel = np.sum(df['Trip Duration'].to_numpy())
     # converts the seconds of travel into months, days, hours, seconds
-    time_div = datetime.timedelta(seconds= int(totr))
+    travel_time_mod = datetime.timedelta(seconds= int(total_travel))
     # prints the travel time
-    print('The total traviel time:\n', time_div)
+    print('The total traviel time:\n', travel_time_mod)
 
 
+<<<<<<< HEAD
 # display mean travel time
-    # converts Trip Duration column to numpy and finds the mean 
-    mean_time = np.mean(df['Trip Duration'].to_numpy())
+    # converts Trip Duration column to numpy 
+    numpy_time = df['Trip Duration'].to_numpy()
+    # finds the mean trip duration
+    mean_time = np.mean(numpy_time)
     # converts the seconds of travel into months, days, hours, seconds. Then prints the result
     print('The mean travel time:', datetime.timedelta(seconds= int(mean_time)))
 
@@ -195,9 +199,10 @@ def user_stats(df):
     start_time = time.time()
 
     # Display counts of user types
-    ut = df['User Type'].value_counts().to_frame()
+    ut = df['User Type'].value_counts()
+    ut_list = ut.to_frame()
     print('\nUser types and counts:\n')
-    print(ut)
+    print(ut_list)
 
 
     # Display counts of gender
