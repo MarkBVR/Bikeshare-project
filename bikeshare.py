@@ -185,9 +185,10 @@ def user_stats(df):
     start_time = time.time()
 
     # Display counts of user types
-    ut = df['User Type'].value_counts().to_frame()
+    ut = df['User Type'].value_counts()
+    ut_list = ut.to_frame()
     print('\nUser types and counts:\n')
-    print(ut)
+    print(ut_list)
 
 
     # Display counts of gender
