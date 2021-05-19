@@ -168,7 +168,7 @@ def trip_duration_stats(df):
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
 
-<<<<<<< HEAD
+
 # display total travel time
     # converts 'Trip Duration' column to numpy and finds the sum of trip durations 
     total_travel = np.sum(df['Trip Duration'].to_numpy())
@@ -178,7 +178,7 @@ def trip_duration_stats(df):
     print('The total traviel time:\n', travel_time_mod)
 
 
-<<<<<<< HEAD
+
 # display mean travel time
     # converts Trip Duration column to numpy 
     numpy_time = df['Trip Duration'].to_numpy()
